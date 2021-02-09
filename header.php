@@ -52,7 +52,7 @@ if (!isset($_SESSION['access'])){
 
       <!-- Divider -->
       <hr class="sidebar-divider">
-<?php if($_SESSION['access']=="DEAN"||$_SESSION['access']=="FACULTY"){
+<?php if($_SESSION['access']=="DEAN"||$_SESSION['access']=="FACULTY"||$_SESSION['access']=="GOVERNOR"){
 ?>
       <!-- Nav Item - Dashboard -->
       <div class="sidebar-heading">
@@ -78,6 +78,7 @@ if (!isset($_SESSION['access'])){
           <span>Sanctions</span>
         </a>
       </li>
+<?php } ?>
 
       <!-- Divider -->
       <!-- <hr class="sidebar-divider"> -->
@@ -101,8 +102,6 @@ if (!isset($_SESSION['access'])){
         </a>
       </li> -->
 
-<?php } ?>
-
       <!-- Nav Item - Utilities Collapse Menu -->
       <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
@@ -120,10 +119,10 @@ if (!isset($_SESSION['access'])){
         </div>
       </li> -->
       <!-- Divider -->
-      <hr class="sidebar-divider">
+      
 <?php if($_SESSION['access']=="DEAN"){
   ?>
-
+    <hr class="sidebar-divider">
       <!-- Heading -->
       <div class="sidebar-heading">
         Settings
@@ -335,7 +334,7 @@ if (!isset($_SESSION['access'])){
                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
               </div>
             </li> -->
-            <span class="text-light" style="margin-top:12%;"><?= $_SESSION['firstlast']?></span>
+            <span class="text-light" style="margin-top:23px;"><?= $_SESSION['firstlast']?></span>
             <div class="topbar-divider d-none d-sm-block"></div>
 
             <!-- Nav Item - User Information -->
@@ -387,5 +386,3 @@ if (!isset($_SESSION['access'])){
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-          
-
