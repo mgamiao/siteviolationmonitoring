@@ -16,8 +16,8 @@ foreach ($get_userData as $key => $row) {
 }
 ?>
 <div align=center>
-<div class="card mb-4 bg-gradient-dark"  style="width:50%;">
-<div class="card-header bg-secondary text-light">
+<div class="card mb-4 bg-gradient-dark"  style="width:50%; border:none;">
+<div class="card-header bg-secondary text-light" style="border:none;">
     <h1>ADD NEW VIOLATION</h1>
 </div>
 
@@ -37,7 +37,7 @@ foreach ($get_userData as $key => $row) {
 <option value="1">Regular</option>
 <option value="0">Irregular</option>
 </select> -->
-<br>
+<br><br>
 
 	<button type="submit" class="btn btn-success btn-icon-split" style="margin-left:5%;">
 	<span class="icon text-white-50">
@@ -60,3 +60,9 @@ foreach ($get_userData as $key => $row) {
 	<br><br><br>
 </form>
 
+</div>
+</div>
+</div>
+</div>
+
+<?php include "footer.php"; ?>

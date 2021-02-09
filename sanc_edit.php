@@ -17,11 +17,11 @@ foreach ($get_userData as $key => $row) {
 }
 ?>
 <div align=center>
-<div class="card mb-4 bg-gradient-dark"  style="width:50%;">
-<div class="card-header bg-secondary">
+<div class="card mb-4 bg-gradient-dark"  style="width:50%; border:none;">
+<div class="card-header bg-secondary" style="border:none;">
     <h1 style="color: white;">UPDATE SANCTION</h1>
 </div>
-
+<br>
 <form method="post" action="<?= $form_location ?>">
 
 <input type="text" name="sanction_name" value="<?= $sanction_name ?>" class="form-control form-control-user" autocomplete=off required style="width:80%; margin-left:5%; margin-top:5%;"> 
@@ -58,3 +58,9 @@ foreach ($get_userData as $key => $row) {
 	<br><br><br>
 </form>
 
+</div>
+</div>
+</div>
+</div>
+
+<?php include "footer.php"; ?>

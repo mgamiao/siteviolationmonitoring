@@ -40,7 +40,7 @@ if (!isset($_SESSION['access'])){
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="stud_manage.php">
@@ -186,7 +186,7 @@ if (!isset($_SESSION['access'])){
       <div id="content">
 
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-dark bg-dark topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand navbar-dark bg-secondary topbar mb-4 static-top shadow">
 
           <!-- Sidebar Toggle (Topbar) -->
           <form class="form-inline">

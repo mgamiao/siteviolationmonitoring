@@ -37,4 +37,8 @@ include "perfect_function.php";
         
         <?php   }   ?>
 
+        </div> 
+
         </div>
+        
+        <?php include "footer.php"; ?>

@@ -23,8 +23,8 @@ foreach ($get_userData as $key => $row) {
 }
 ?>
 <div align=center>
-<div class="card mb-4 w-100 bg-gradient-dark"  style="width:50%;">
-<div class="card-header bg-secondary text-light">
+<div class="card mb-4 w-75 bg-gradient-dark"  style="width:50%; border:none;">
+<div class="card-header bg-secondary text-light" style="border:none;">
     <h1>EDIT ACCOUNT</h1>
 </div>
 
@@ -35,7 +35,7 @@ foreach ($get_userData as $key => $row) {
     <input type="text" name="username" class="form-control form-control-user" autocomplete=off value="<?= $username;?>" style="width:40%; margin-left:25%; margin-top:5%; float:left;" readonly>
 
   </div>
-
+<br>
   <div class="input-group" style="width:75%; margin-left:0%; margin-top: 9%;">
 
       <input type="text" name="firstname" class="form-control form-control-user" autocomplete=off value="<?= $firstname;?>" class="form-control">
@@ -83,4 +83,9 @@ foreach ($get_userData as $key => $row) {
 
 	<br><br><br>
 </form>
+</div>
+</div>
+</div>
+</div>
 
+<?php include "footer.php"; ?>

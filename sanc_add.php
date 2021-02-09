@@ -2,8 +2,8 @@
 include "header.php"
 ?>
 <div align=center>
-<div class="card mb-4 bg-gradient-dark"  style="width:50%;">
-<div class="card-header bg-secondary text-light">
+<div class="card mb-4 bg-gradient-dark" style="width:50%; border:none;">
+<div class="card-header bg-secondary text-light" style="border:none;">
     <h1>ADD NEW SANCTION</h1>
 </div>
 
@@ -41,3 +41,8 @@ include "header.php"
 
 <form>
 </div>
+</div>
+</div>
+</div>
+
+<?php include "footer.php"; ?>

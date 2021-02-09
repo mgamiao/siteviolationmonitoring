@@ -57,8 +57,8 @@ include "perfect_function.php";
     }
     ?>
 
-    <div class="card w-100 bg-gradient-dark">
-                <div class="card-header py-3 bg-secondary">
+    <div class="card w-100 bg-gradient-dark" style="border:none;">
+                <div class="card-header py-3 bg-secondary" style="border:none;">
                 <h1 class="m-0 font-weight-bold text-light">STUDENTS</h1>
                 </div>
                 <div class="card-body">
@@ -83,8 +83,8 @@ include "perfect_function.php";
                 </a>
                 <?php }?>
 
-                <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <div class="table-responsive" >
+                    <table class="table" id="dataTable" width="100%" cellspacing="0" >
         
         <thead class="bg-secondary" style="text-align: center; color: white;">
         <tr>
@@ -196,6 +196,11 @@ include "perfect_function.php";
         <?php   }   ?>
     </tbody>
 </table>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

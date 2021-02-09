@@ -55,8 +55,8 @@ unset($_SESSION['committer_id']);
     </a>
 
 <br><br> -->
-    <div class="card w-100 bg-gradient-dark">
-                <div class="card-header py-3 bg-secondary">
+    <div class="card w-100 bg-gradient-dark" style="border:none;"> 
+                <div class="card-header py-3 bg-secondary" style="border:none;">
                 <h1 class="m-0 font-weight-bold text-light">VIOLATIONS</h1>
                 </div>
                 <div class="card-body">
@@ -70,7 +70,7 @@ unset($_SESSION['committer_id']);
                 </form>
                 
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table" id="dataTable" width="100%" cellspacing="0">
         
         <thead class="bg-secondary" style="text-align: center; color: white;">
         <tr>
@@ -194,4 +194,8 @@ unset($_SESSION['committer_id']);
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 
+<?php include "footer.php"; ?>

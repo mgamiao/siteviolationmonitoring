@@ -33,8 +33,8 @@ include "header.php";
 ?>
 
 <div align=center>
-<div class="card mb-4 w-75 bg-gradient-dark">
-<div class="card-header bg-gradient-dark">
+<div class="card mb-4 w-75 bg-gradient-dark" style="border:none;">
+<div class="card-header bg-secondary" style="border:none;">
 <h1 class="m-0 font-weight-bold text-light">UPDATE DETAILS</h1>
 </div>
 
@@ -105,3 +105,7 @@ include "header.php";
 
 <form>
 </div>
+</div>
+</div>
+</div>
+<?php include "footer.php"; ?>

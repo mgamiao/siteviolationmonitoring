@@ -7,11 +7,11 @@ include "header.php";
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-<div class="card shadow w-50 bg-gradient-dark">
-                <div class="card-header py-3 bg-secondary">
+<div class="card shadow w-50 bg-gradient-dark" style="border:none;">
+                <div class="card-header py-3 bg-secondary" style="border:none;">
                   <h1 class="m-0 font-weight-bold text-light">COMPLY VIOLATION</h1>
                 </div>
-                
+                <br>
                 <div class="card-body">
                   <h5 style="color: white;">Student have complied with the violation</h5>
            <br>
@@ -40,4 +40,9 @@ include "header.php";
             </div>
 
               </div>
+</div>
+</div>
+</div>
+</div>
 
+<?php include "footer.php"; ?> 

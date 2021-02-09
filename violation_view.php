@@ -156,8 +156,8 @@ include "perfect_function.php";
 </div>
 
 
-    <div class="card w-100" style="margin-top:3%;">
-                <div class="card-header py-3 bg-secondary">
+    <div class="card w-100" style="margin-top:3%; border:none;">
+                <div class="card-header py-3 bg-secondary" style="border:none;">
                 <h5 class="m-0 font-weight-bold text-white">STUDENT INFORMATION</h5>
                 </div>
                 <div class="card-body bg-gradient-dark">
@@ -209,13 +209,13 @@ include "perfect_function.php";
 <br>
 
 
-<div class="card w-100 bg-gradient-dark" style="margin-top: 20px; float: left;">
-                <div class="card-header py-3 bg-secondary">
+<div class="card w-100 bg-gradient-dark" style="margin-top: 20px; float: left; border:none;">
+                <div class="card-header py-3 bg-secondary" style="border:none;">
                 <h5 class="m-0 font-weight-bold text-white">VIOLATIONS</h5>
                 </div>
                 <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table" id="dataTable" width="100%" cellspacing="0">
         
         <thead class="bg-secondary" style="text-align:center; color:white;">
         <tr>
@@ -327,11 +327,11 @@ include "perfect_function.php";
 </div>
 </div>
 </div>
-
-
+</div>
+</div>
 </div>
 
 
 
 
-
+<?php include "footer.php" ?>
