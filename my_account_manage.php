@@ -62,7 +62,7 @@ include "perfect_function.php";
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
     
-    <thead style="text-align:center; color:white;">
+    <thead style="text-align:center; color:white;" class="bg-secondary">
     <tr>
         <td>Username</td>
         <td>Full Name</td>
@@ -74,7 +74,7 @@ include "perfect_function.php";
     </tr>
     </thead>
 
-    <tfoot style="text-align:center; color:white;">
+    <tfoot style="text-align:center; color:white;" class="bg-secondary">
     <tr>
         <td>Username</td>
         <td>Full Name</td>

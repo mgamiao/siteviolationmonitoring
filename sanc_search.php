@@ -41,73 +41,70 @@ include "perfect_function.php";
         }
     }
 ?>
-<br>
-<a href="sanc_add.php" class="btn btn-success btn-icon-split">
-    <span class="icon text-white-50">
-        <i class="fas fa-user-plus"></i>
-</span>
-<span class="text">
-    ADD SANCTION
-</span>
-</a>
 
 <br><br>
 
 
-<div class="card w-75">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">SANCTIONS</h6>
+<div class="card w-100 bg-gradient-dark">
+            <div class="card-header py-3 bg-secondary">
+              <h1 class="m-0 font-weight-bold text-light">SANCTIONS</h1>
             </div>
             <div class="card-body">
             <form method="post" action="sanc_search.php">
                     <div class="input-group mb-3 w-25" style="float: left;">
                     <input type="text" class="form-control" placeholder="" name="search" autocomplete="off" required>
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
+                            <button class="btn btn-outline-secondary text-light" type="submit" id="button-addon2">Search</button>
                         </div>
                         </div>
                 </form>
-                <a href="sanc_manage.php" class="btn btn-outline-secondary btn-icon-split" style="float: left; margin-left: 1%;">
-                    <span class="icon text-black-50">
-                    <i class="fas fa-users"></i>
-                </span>
-                <span class="text">
-                    View all
-                </span>
+
+                <a href="sanc_manage.php" class="btn btn-secondary btn-icon-split" style="float: right; margin-left: 1%;">
+                    <span class="icon text-dark-50">
+                        <i class="fas fa-long-arrow-alt-left"></i>
+                    </span>
+                    <span class="text">
+                        Return to Sanction List
+                    </span>
                 </a>
+
+                <a href="sanc_add.php" class="btn btn-success btn-icon-split" style="float: right; margin-left: 1%;">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    <span class="text">
+                        New Sanction
+                    </span>
+                </a>
+
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
     
-    <thead>
+    <thead style="text-align:center; color:white;" class="bg-secondary">
     <tr>
-        <td>&nbsp;</td>
-        <td>Item Name</td>
+        <td>Sanction Name</td>
         <td>Quantity</td>
-        <?php if($_SESSION['access']=="DEAN"){ ?>
-            <td>Option</td>
-            <?php } ?>
+        <td>Option</td>
 
     </tr>
     </thead>
 
-    <tfoot>
+    <tfoot style="text-align:center; color:white;" class="bg-secondary">
     <tr>
-        <td>&nbsp;</td>
-        <td>Item Name</td>
+        <td>Sanction Name</td>
         <td>Quantity</td>
-        <?php if($_SESSION['access']=="DEAN"){ ?>
-            <td>Option</td>
-            <?php } ?>
+        <td>Option</td>
+
 
     </tr>
     </tfoot>
 
-    <tbody>
+    <tbody style="text-align:center; color:white;">
 
     <?php
         $table_name="sanctions";
         $search=$_POST['search'];
-        echo "<div style='float:left;'><i>Results of <b>"
+        echo "<div style='float:left; color:white;'><i>Results of <b>"
                 ."'".$_POST['search']."'"
                 ."</b>.</i><br><br></div>";
         $user_data=search_sanc($table_name, $search);
@@ -121,29 +118,35 @@ include "perfect_function.php";
     
 
     <tr>
-        <td><?= $sanction_id ?></td>
+        <!-- <td><?= $sanction_id ?></td> -->
         <td><?= $sanction_name ?></td>
         <td><?= $quantity ?></td>
 
 
-        <?php if($_SESSION['access']=="DEAN"){ ?>
+        
             
             <td>
-            <a href="sanc_deact.php?id=<?= $sanction_id?>" class="btn btn-secondary btn-icon-split" style="margin-left: 1%;">
-                        <span class="icon text-red-50">
-                        <i class="fas fa-truck-loading"></i>
-                    </span>
-                    <span class="text">
-                        DEACTIVATE
-                    </span>
             &nbsp;&nbsp;
             </a>
-                <a href="sanc_edit.php?id=<?= $sanction_id?>" class="btn btn-warning btn-circle btn-md">
-                <i class="far fa-edit"></i>
-                </a>
-            &nbsp;&nbsp;&nbsp;
-            <a href="sanc_delete.php?id=<?= $sanction_id?>" class="btn btn-danger btn-circle btn-md">
-                <i class="far fa-trash-alt"></i>
+            <a href="sanc_edit.php?id=<?= $sanction_id?>" class="btn btn-warning btn-icon-split btn-md">
+            <span class="icon text-red-50">
+            <i class="far fa-edit"></i>
+            </span>
+            <span class="text">
+                    EDIT
+                </span>
+            </a>
+        &nbsp;&nbsp;&nbsp;
+
+        <?php if($_SESSION['access']=="DEAN"){ ?>
+
+        <a href="sanc_delete.php?id=<?= $sanction_id?>" class="btn btn-danger btn-icon-split btn-md">
+        <span class="icon text-red-50">
+        <i class="far fa-trash-alt"></i>
+        </span>
+        <span class="text">
+            DELETE
+        </span>
                 </a>
                 </a>
             </td>

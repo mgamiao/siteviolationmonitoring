@@ -309,9 +309,7 @@ function search_stud($table_name, $search)
 	 middlename LIKE '%$search%' OR 
 	 lastname LIKE '%$search%' OR 
 	 email LIKE '%$search%' OR 
-	 contact LIKE '%$search%' OR 
-	 officer LIKE '%$search%' OR 
-	 gender LIKE '%$search%') AND (status = 0)";
+	 contact LIKE '%$search%')";
 	$result = $conn->query($sql);
 	return $result;
 }

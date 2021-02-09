@@ -46,18 +46,6 @@ include "perfect_function.php";
             $section=$row['section'];
             $email=$row['email'];
             $contact=$row['contact'];
-            $officer=$row['officer'];
-                // if ($officer==YES){
-                //     $officer="YES";
-                // } else {
-                //     $officer="NO";
-                // }
-            $gender=$row['gender'];
-                // if ($gender==1){
-                //     $gender="FEMALE";
-                // } else {
-                //     $gender="MALE";
-                // }
 
     ?>
 <br>
@@ -162,7 +150,7 @@ include "perfect_function.php";
             <i class="fas fa-long-arrow-alt-left"></i>
         </span>
         <span class="text">
-            Return to Student List
+            Return to Violation List
         </span>
         </a>
 </div>
@@ -311,7 +299,11 @@ include "perfect_function.php";
                 </span>
             </a>
         &nbsp;&nbsp;&nbsp;
-        <a href="violation_delete.php?id=<?= $id?>&id2=<?= $vio_id?>" class="btn btn-danger btn-icon-split btn-md">
+        
+        
+<?php if($_SESSION['access']=="DEAN"){
+?>
+      <a href="violation_delete.php?id=<?= $id?>&id2=<?= $vio_id?>" class="btn btn-danger btn-icon-split btn-md">
         <span class="icon text-red-50">
         <i class="far fa-trash-alt"></i>
         </span>
@@ -319,6 +311,10 @@ include "perfect_function.php";
             Delete
         </span>
             </a>
+<?php } ?>
+
+
+        
             </a>
         </td>
     </tr>

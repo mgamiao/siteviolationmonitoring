@@ -65,7 +65,7 @@ include "perfect_function.php";
         }
     }
 ?>
-<br>
+
 
 <div class="card w-100 bg-gradient-dark">
             <div class="card-header py-3 bg-secondary">
@@ -93,22 +93,20 @@ include "perfect_function.php";
     
     <thead class="bg-secondary" style="text-align:center; color:white;">
     <tr>
-        <td>Item Name</td>
+        <td>Sanction Name</td>
         <td>Quantity</td>
-        <?php if($_SESSION['access']=="DEAN"){ ?>
-            <td>Option</td>
-            <?php } ?>
+        <td>Option</td>
+
 
     </tr>
     </thead>
 
     <tfoot class="bg-secondary" style="text-align:center; color:white;">
     <tr>
-        <td>Item Name</td>
+        <td>Sanction Name</td>
         <td>Quantity</td>
-        <?php if($_SESSION['access']=="DEAN"){ ?>
-            <td>Option</td>
-            <?php } ?>
+        <td>Option</td>
+
 
     </tr>
     </tfoot>
@@ -133,7 +131,7 @@ include "perfect_function.php";
         <td><?= $sanction_name ?></td>
         <td><?= $quantity ?></td>
 
-        <?php if($_SESSION['access']=="DEAN"){ ?>
+        
             
         <td>
         <!-- <a href="sanc_deact.php?id=<?= $sanction_id?>" class="btn btn-secondary btn-icon-split" style="margin-left: 1%;">
@@ -154,6 +152,9 @@ include "perfect_function.php";
                 </span>
             </a>
         &nbsp;&nbsp;&nbsp;
+
+        <?php if($_SESSION['access']=="DEAN"){ ?>
+
         <a href="sanc_delete.php?id=<?= $sanction_id?>" class="btn btn-danger btn-icon-split btn-md">
         <span class="icon text-red-50">
         <i class="far fa-trash-alt"></i>

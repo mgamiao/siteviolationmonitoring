@@ -28,7 +28,6 @@
     // GETTING ENTRY ID
     
     date_default_timezone_set('Asia/Singapore');
-
     $table_name="logs";
     $username= $_SESSION['username'];
     $fullname=$_SESSION['firstlast'];

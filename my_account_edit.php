@@ -49,13 +49,17 @@ foreach ($get_userData as $key => $row) {
 
       <input type="email" name="email" class="form-control form-control-user" autocomplete=off value="<?= $email;?>" style="width:25%; margin-left:2%; margin-top:2%; float:left;">
 
+    <?php if($_SESSION['access']=="DEAN"){
+    ?>
 
-    <select type="text" name="user_type" class="form-control form-control-user" autocomplete=off required style="width:25%; margin-left:2%; margin-right: 3%; margin-top:2%; float:left;">
+      <select type="text" name="user_type" class="form-control form-control-user" autocomplete=off required style="width:25%; margin-left:2%; margin-right: 3%; margin-top:2%; float:left;">
         <option value="">Type:</option>
         <option value="GOVERNOR">GOVERNOR</option>
         <option value="FACULTY">FACULTY</option>
         <option value="DEAN">DEAN</option>
       </select>
+
+    <?php } ?>
 
   </div>
     <br>

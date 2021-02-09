@@ -58,33 +58,35 @@ unset($_SESSION['committer_id']);
 <br><br> -->
 
 
-    <div class="card w-75">
-                <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">STUDENTS</h6>
+    <div class="card w-100 bg-gradient-dark">
+                <div class="card-header py-3 bg-secondary">
+                <h1 class="m-0 font-weight-bold text-light">STUDENTS</h1>
                 </div>
                 <div class="card-body">
                 <form method="post" action="violation_active_search.php">
                     <div class="input-group mb-3 w-25" style="float: left;">
                     <input type="text" class="form-control" placeholder="" name="search" autocomplete="off" required>
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
+                            <button class="btn btn-outline-secondary text-light" type="submit" id="button-addon2">Search</button>
                         </div>
                         </div>
                 </form>
-                <a href="violation_active_manage.php" class="btn btn-outline-secondary btn-icon-split" style="float: left; margin-left: 1%;">
-                    <span class="icon text-black-50">
-                    <i class="fas fa-users"></i>
-                </span>
-                <span class="text">
-                    View all
-                </span>
+
+                <a href="violation_active_manage.php" class="btn btn-secondary btn-icon-split" style="float: right; margin-left: 1%;">
+                    <span class="icon text-dark-50">
+                        <i class="fas fa-long-arrow-alt-left"></i>
+                    </span>
+                    <span class="text">
+                        Return to Violation List
+                    </span>
                 </a>
+
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         
-        <thead>
+        <thead style="text-align:center;" class="bg-secondary text-light">
         <tr>
-            <td>&nbsp;</td>
+            <td>Student ID</td>
             <td>Name</td>
             <td>Program</td>
             <td>Year</td>
@@ -98,9 +100,9 @@ unset($_SESSION['committer_id']);
         </tr>
         </thead>
 
-        <tfoot>
+        <tfoot style="text-align:center;" class="bg-secondary text-light">
         <tr>
-            <td>&nbsp;</td>
+            <td>Student ID</td>
             <td>Name</td>
             <td>Program</td>
             <td>Year</td>
@@ -114,12 +116,12 @@ unset($_SESSION['committer_id']);
         </tr>
         </tfoot>
 
-        <tbody>
+        <tbody style="text-align:center; color:white;">
 
     <?php
         $table_name="students";
         $search=$_POST['search'];
-        echo "<div style='float:left;'><i>Results of <b>"
+        echo "<div style='float:left; color:white;'><i>Results of <b>"
                 ."'".$_POST['search']."'"
                 ."</b>.</i><br><br></div>";
         $user_data=search_stud($table_name, $search);
@@ -154,18 +156,6 @@ unset($_SESSION['committer_id']);
             $section=$row['section'];
             $email=$row['email'];
             $contact=$row['contact'];
-            $officer=$row['officer'];
-                // if ($officer==YES){
-                //     $officer="YES";
-                // } else {
-                //     $officer="NO";
-                // }
-            $gender=$row['gender'];
-                // if ($gender==1){
-                //     $gender="FEMALE";
-                // } else {
-                //     $gender="MALE";
-                // }
 
     ?>
     

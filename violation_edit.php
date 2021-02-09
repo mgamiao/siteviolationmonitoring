@@ -35,7 +35,13 @@ foreach ($get_userData as $key => $row) {
 	<input type="text" name="description" value="<?= $description ?>" class="form-control form-control-user" autocomplete=off required style="width:80%; margin-left:5%; margin-top:5%;"> 
 
     <input type="date" name="date_committed" value="<?= $date_committed ?>" class="form-control form-control-user" autocomplete=off required style="width:80%; margin-left:5%; margin-top:5%;"> 
-	<br>
+
+	<select type="text" name="compliance" class="form-control form-control-user" autocomplete=off required style="width:80%; margin-left:5%; margin-top:5%;"> 
+	<option value="1">Compliance</option>
+	  <option value="1">Complied</option>
+      <option value="0">Not Complied</option>
+      
+    </select>
 	<!-- <select name="status" class="form-control" required style="width:80%; margin-left:5%; margin-top:5%;">
 <option value="">Select Student Status:</option>
 <option value="1">Regular</option>

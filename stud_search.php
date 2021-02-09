@@ -46,53 +46,54 @@ include "perfect_function.php";
     ?>
 
 <br>
-    <a href="stud_add.php" class="btn btn-success btn-icon-split">
-        <span class="icon text-white-50">
-            <i class="fas fa-user-plus"></i>
-    </span>
-    <span class="text">
-        ADD STUDENT
-    </span>
-    </a>
 
 <br><br>
 
 
-    <div class="card w-100">
-                <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">STUDENTS</h6>
+    <div class="card w-100 bg-gradient-dark">
+                <div class="card-header py-3 bg-secondary">
+                <h1 class="m-0 font-weight-bold text-light">STUDENTS</h1>
                 </div>
                 <div class="card-body">
                 <form method="post" action="stud_search.php">
                     <div class="input-group mb-3 w-25" style="float: left;">
                     <input type="text" class="form-control" placeholder="" name="search" autocomplete="off" required>
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
+                            <button class="btn btn-outline-secondary text-light" type="submit" id="button-addon2">Search</button>
                         </div>
                         </div>
                 </form>
-                <a href="stud_manage.php" class="btn btn-outline-secondary btn-icon-split" style="float: left; margin-left: 1%;">
-                    <span class="icon text-black-50">
-                    <i class="fas fa-users"></i>
-                </span>
-                <span class="text">
-                    View all
-                </span>
+
+                <a href="stud_manage.php" class="btn btn-secondary btn-icon-split" style="float: right; margin-left: 1%;">
+                    <span class="icon text-dark-50">
+                        <i class="fas fa-long-arrow-alt-left"></i>
+                    </span>
+                    <span class="text">
+                        Return to Student List
+                    </span>
                 </a>
+
+                <a href="stud_add.php" class="btn btn-success btn-icon-split" style="float: right; margin-left: 1%;">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    <span class="text">
+                        NEW STUDENT
+                    </span>
+                </a>
+
+                
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         
-        <thead>
+        <thead style="text-align:center; color:white;" class="bg-secondary">
         <tr>
-            <td>&nbsp;</td>
             <td>Name</td>
             <td>Program</td>
             <td>Year</td>
             <td>Section</td>
             <td>Email</td>
             <td>Contact</td>
-            <td>Officer</td>
-            <td>Gender</td>
             <?php if($_SESSION['access']=="DEAN"){ ?>
             <td>Option</td>
             <?php } ?>
@@ -100,17 +101,14 @@ include "perfect_function.php";
         </tr>
         </thead>
 
-        <tfoot>
+        <tfoot style="text-align:center; color:white;" class="bg-secondary">
         <tr>
-            <td>&nbsp;</td>
             <td>Name</td>
             <td>Program</td>
             <td>Year</td>
             <td>Section</td>
             <td>Email</td>
             <td>Contact</td>
-            <td>Officer</td>
-            <td>Gender</td>
             <?php if($_SESSION['access']=="DEAN"){ ?>
             <td>Option</td>
             <?php } ?>
@@ -123,7 +121,7 @@ include "perfect_function.php";
     <?php
         $table_name="students";
         $search=$_POST['search'];
-        echo "<div style='float:left;'><i>Results of <b>"
+        echo "<div class='text-light' style='float:left;'><i>Results of <b>"
                 ."'".$_POST['search']."'"
                 ."</b>.</i><br><br></div>";
         $user_data=search_stud($table_name, $search);
@@ -132,70 +130,37 @@ include "perfect_function.php";
             $id=$row['id'];
             $name=$row['firstname'] ." ". $row['middlename'] ." ". $row['lastname'];
             $program=$row['program'];
-                // if ($program==0){
-                //     $program="BLIS";
-                // } elseif ($program==1){
-                //     $program="BSIT";
-                // } elseif ($program==2){
-                //     $program="BSCE";
-                // } elseif ($program==3){
-                //     $program="BSCpE";
-                // } else {
-                //     $program="BSEnSE";
-                // }
             $year_level=$row['year_level'];
-                if ($year_level==1){
-                    $year_level="1";
-                } elseif ($year_level==2){
-                    $year_level="2";
-                } elseif ($year_level==3){
-                    $year_level="3";
-                } elseif ($year_level==4){
-                    $year_level="4";
+                if ($year_level == 1){
+                    $year_level = "1";
+                } elseif ($year_level == 2){
+                    $year_level = "2";
+                } elseif ($year_level == 3){
+                    $year_level = "3";
+                } elseif ($year_level == 4){
+                    $year_level = "4";
                 } else {
-                    $year_level="5";
+                    $year_level = "5";
                 }
             $section=$row['section'];
             $email=$row['email'];
             $contact=$row['contact'];
-            $officer=$row['officer'];
-                // if ($officer==YES){
-                //     $officer="YES";
-                // } else {
-                //     $officer="NO";
-                // }
-            $gender=$row['gender'];
-                // if ($gender==1){
-                //     $gender="FEMALE";
-                // } else {
-                //     $gender="MALE";
-                // }
 
     ?>
     
 
-    <tr>
-        <td><?= $id ?></td>
+    <tr style="text-align:center; color:white;">
+        <!-- <td><?= $id ?></td> -->
         <td><?= $name ?></td>
         <td><?= $program ?></td>
         <td><?= $year_level ?></td>
         <td><?= $section ?></td>
         <td><?= $email ?></td>
         <td><?= $contact ?></td>
-        <td><?= $officer ?></td>
-        <td><?= $gender ?></td>
 
         <?php if($_SESSION['access']=="DEAN"){ ?>
             
             <td>
-            <a href="stud_deact.php?id=<?= $id?>" class="btn btn-secondary btn-icon-split" style="margin-left: 1%;">
-                        <span class="icon text-red-50">
-                        <i class="fas fa-user-slash"></i>
-                    </span>
-                    <span class="text">
-                        DEACTIVATE
-                    </span>
-            </a>
             &nbsp;&nbsp;
             <a href="stud_edit.php?id=<?= $id?>" class="btn btn-warning btn-icon-split btn-md">
             <span class="icon text-red-50">

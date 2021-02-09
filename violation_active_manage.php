@@ -57,7 +57,7 @@ unset($_SESSION['committer_id']);
 <br><br> -->
     <div class="card w-100 bg-gradient-dark">
                 <div class="card-header py-3 bg-secondary">
-                <h1 class="m-0 font-weight-bold text-light">STUDENTS</h1>
+                <h1 class="m-0 font-weight-bold text-light">VIOLATIONS</h1>
                 </div>
                 <div class="card-body">
                 <form method="post" action="violation_active_search.php">
@@ -141,18 +141,7 @@ unset($_SESSION['committer_id']);
             $section=$row['section'];
             $email=$row['email'];
             $contact=$row['contact'];
-            $officer=$row['officer'];
-                // if ($officer==YES){
-                //     $officer="YES";
-                // } else {
-                //     $officer="NO";
-                // }
-            $gender=$row['gender'];
-                // if ($gender==1){
-                //     $gender="FEMALE";
-                // } else {
-                //     $gender="MALE";
-                // }
+
 
     ?>
     
@@ -164,9 +153,7 @@ unset($_SESSION['committer_id']);
         <td><?= $year_level ?></td>
         <td><?= $section ?></td>
         <!-- <td><?= $email ?></td>
-        <td><?= $contact ?></td>
-        <td><?= $officer ?></td>
-        <td><?= $gender ?></td> -->
+        <td><?= $contact ?></td> -->
 
         <td>
                 

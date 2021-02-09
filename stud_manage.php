@@ -70,6 +70,9 @@ include "perfect_function.php";
                         </div>
                         </div>
                 </form>
+
+                <?php if($_SESSION['access']=="DEAN"||$_SESSION['access']=="FACULTY"){
+                ?>
                 <a href="stud_add.php" class="btn btn-success btn-icon-split" style="float: right; margin-left: 1%;">
                     <span class="icon text-white-50">
                         <i class="fas fa-plus"></i>
@@ -78,6 +81,8 @@ include "perfect_function.php";
                         NEW STUDENT
                     </span>
                 </a>
+                <?php }?>
+
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         
@@ -194,3 +199,5 @@ include "perfect_function.php";
 </div>
 </div>
 </div>
+
+<?php include "footer.php"; ?>
