@@ -28,7 +28,7 @@ include "perfect_function.php";
         
                 <b>LOGS: </b><?= $action.", ".$xdate." ".$xtime ?>
                 <br>
-                <b>USER: </b><?= $fullname." (".$user_type.")" ?>
+                <b>USER: </b><?= $username." - " .$fullname." (".$user_type.")" ?>
 
               </span>
 
