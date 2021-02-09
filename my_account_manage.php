@@ -46,8 +46,8 @@ include "perfect_function.php";
 <br><br>
 
 
-<div class="card w-100 bg-gradient-dark">
-            <div class="card-header py-3 bg-secondary">
+<div class="card w-100 bg-gradient-dark" style="border:none;">
+            <div class="card-header py-3 bg-secondary" style="border:none;">
               <h1 class="m-0 font-weight-bold text-light">MY ACCOUNT</h1>
             </div>
             <div class="card-body">
@@ -60,7 +60,7 @@ include "perfect_function.php";
                         </div>
                 </form> -->
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table" id="dataTable" width="100%" cellspacing="0">
     
     <thead style="text-align:center; color:white;" class="bg-secondary">
     <tr>
@@ -126,7 +126,7 @@ include "perfect_function.php";
             <i class="far fa-edit"></i>
             </span>
             <span class="text">
-                    EDIT
+                    Edit
                 </span>
             </a>
         &nbsp;&nbsp;&nbsp;
@@ -143,4 +143,8 @@ include "perfect_function.php";
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 
+<?php include "footer.php"; ?>

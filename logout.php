@@ -6,8 +6,8 @@ include "header.php";
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-<div class="card shadow w-50 bg-gradient-dark text-light">
-                <div class="card-header py-3 bg-gradient-dark">
+<div class="card shadow w-50 bg-gradient-dark text-light" style="border:none;">
+                <div class="card-header py-3 bg-secondary" style="border:none;">
                   <h1 class="m-0 font-weight-bold text-light">LOG OUT</h1>
                 </div>
                 
