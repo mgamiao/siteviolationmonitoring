@@ -144,7 +144,7 @@ include "perfect_function.php";
             <i class="far fa-edit"></i>
             </span>
             <span class="text">
-                    EDIT
+                    Edit
                 </span>
             </a>
         &nbsp;&nbsp;&nbsp;
@@ -153,7 +153,7 @@ include "perfect_function.php";
         <i class="far fa-trash-alt"></i>
         </span>
         <span class="text">
-            DELETE
+            Delete
         </span>
             </a>
             </a>

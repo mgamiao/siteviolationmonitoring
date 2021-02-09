@@ -53,10 +53,10 @@ include "header.php"
     &nbsp;&nbsp;
       <a href="account_manage.php" class="btn btn-danger btn-icon-split" style=" margin-top:5%">
         <span class="icon text-white-50">
-      <i class="fas fa-ban"></i>
+      <i class="fas fa-times"></i>
     </span>
     <span class="text">
-        CANCEL
+        Cancel
     </span>
     </a>
 <br><br><br>
