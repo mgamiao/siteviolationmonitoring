@@ -138,7 +138,7 @@ include "perfect_function.php";
         <i class="far fa-trash-alt"></i>
         </span>
         <span class="text">
-            Delete
+            Deletx
         </span>
             </a>
             </a>
